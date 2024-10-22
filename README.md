@@ -1,14 +1,12 @@
-![Banner](logo)
+![Banner](https://github.com/rennandagomez/solana-sniper-bot/blob/11a225723345ae12ab84b5dc6665056df5fc27c6/images/logo.png)
 
 ## SSB SOLANA SNIPER BOT
 
 ![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)
 [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
-[![GitHub Forks](https://img.shields.io/github/forks/CryptoMemeLab/ssb-solana-sniper-bot.svg?branch=main)](https://github.com/CryptoMemeLab/ssb-solana-sniper-bot/network)
-[![GitHub Stars](https://img.shields.io/github/stars/CryptoMemeLab/ssb-solana-sniper-bot.svg?branch=main)](https://github.com/CryptoMemeLab/ssb-solana-sniper-bot/stargazers)
 [![GitHub License](https://img.shields.io/badge/license-mit.svg)](https://raw.githubusercontent.com/CryptoMemeLab/ssb-solana-sniper-bot/main/LICENSE.md)
 
-**SSB sniper bot** is a bot that listen for all new raydium tokens pool USDC/SOL sniped in realtime. 
+**SSB solana sniper bot** listens to new Raydium USDC or SOL pools and buys tokens for a fixed amount in USDC/SOL.
 
 > *Bot snipe & trade new token before it show on web Raydium UI ready for swapping.*
 
@@ -40,7 +38,7 @@ First step:
 > # Installation
 >
 >
-> [1] ```git clone https://github.com/HiggsBosonKey/solana-sniper-bot.git```
+> [1] ```git clone https://github.com/rennandagomez/solana-sniper-bot```
 > 
 >[2] ```cd solana-sniper-bot-main```
 > 
@@ -67,7 +65,7 @@ First step:
 13. `STOP_LOSS=90` (in %)
 14. `BIRDEYE_APIKEY=` get here: https://docs.birdeye.so/docs/authentication-api-keys
 
-![](running)
+![](https://github.com/rennandagomez/solana-sniper-bot/blob/11a225723345ae12ab84b5dc6665056df5fc27c6/images/running.png)
 
 
 ## Auto sell
@@ -104,7 +102,7 @@ You can update the list while script is running. Script will check for new value
 > it means that your wallet not have USDC/WSOL token account.
 > FIX: Go to [Jup.ag](https://jup.ag) and swap some SOL/USDC or SOL/WSOL.
 >
-> ![](jup)
+> ![](https://github.com/rennandagomez/solana-sniper-bot/blob/11a225723345ae12ab84b5dc6665056df5fc27c6/images/jupwsol.png)
 
 ## Contact
 Discord: `@devvittal`
