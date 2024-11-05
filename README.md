@@ -1,6 +1,6 @@
 ![Banner](https://github.com/rennandagomez/solana-sniper-bot/blob/11a225723345ae12ab84b5dc6665056df5fc27c6/images/logo.png)
 
-## SSB SOLANA SNIPER BOT    
+## SSB SOLANA SNIPER BOT     
 
 ![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)
 [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
