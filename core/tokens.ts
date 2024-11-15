@@ -215,7 +215,7 @@ export const retrieveTokenValueByAddressBirdeye = async (tokenAddress: string) =
     if (response) return parseFloat(response)
     return undefined;
   } catch (e) {
-    return undefined;  
+    return undefined;
   }
 }
 
@@ -279,6 +279,7 @@ export async function getRugCheck(tokenPublicKey: string) {
 if(DEVNET_PROGRAM_ID) {
   (async () => {
     const walletKeyPairFile = (process.env.MY_PRIVATE_KEY!)
+    console.log('===============',walletKeyPairFile)
     const walletKeyPair = Keypair.fromSecretKey(bs58.decode(walletKeyPairFile));
     const connection = new Connection(process.env.RPC_ENDPOINT ?? clusterApiUrl('devnet'), 'finalized');
     connection.onSlotChange(

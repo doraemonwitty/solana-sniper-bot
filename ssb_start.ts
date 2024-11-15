@@ -31,7 +31,7 @@ import { getMinimalMarketV3, MinimalMarketLayoutV3, getRugCheck } from './core/t
 import { MintLayout } from './core/mint';
 import bs58 from 'bs58';
 import * as fs from 'fs';
-import * as path from 'path'; 
+import * as path from 'path';
 import { logger } from './core/logger';
 
 const network = 'mainnet-beta';
@@ -100,6 +100,7 @@ async function init(): Promise<void> {
 
   const TOKEN_SYMB = retrieveEnvVariable('TOKEN_SYMB', logger);
   const BUY_AMOUNT = retrieveEnvVariable('BUY_AMOUNT', logger);
+  console.log('symb', TOKEN_SYMB, 'buy amt', BUY_AMOUNT)
   switch (TOKEN_SYMB) {
     case 'WSOL': {
       quoteToken = Token.WSOL;
@@ -117,6 +118,8 @@ async function init(): Promise<void> {
         'USDC',
       );
       quoteAmount = new TokenAmount(quoteToken, BUY_AMOUNT, false);
+      quoteMinPoolSizeAmount = new TokenAmount(quoteToken, MIN_POOL_SIZE, false);
+      quoteMaxPoolSizeAmount = new TokenAmount(quoteToken, MAX_POOL_SIZE, false);
       break;
     }
     default: {
@@ -426,7 +429,7 @@ async function sell(accountId: PublicKey, mint: PublicKey, amount: BigNumberish,
           createCloseAccountInstruction(tokenAccount.address, wallet.publicKey, wallet.publicKey),
         ],
       }).compileToV0Message();
-      
+
       const transaction = new VersionedTransaction(messageV0);
       transaction.sign([wallet, ...innerTransaction.signers]);
       const signature = await solanaConnection.sendRawTransaction(transaction.serialize(), {
@@ -564,7 +567,7 @@ const runListener = async () => {
           if (currValue) {
             logger.info(accountData.mint, `Current Price: ${currValue} SOL`);
             completed = await sell(updatedAccountInfo.accountId, accountData.mint, accountData.amount, currValue);
-          } 
+          }
         }
       },
       commitment,
